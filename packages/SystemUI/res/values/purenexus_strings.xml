@@ -76,6 +76,11 @@
     <!-- Brightness QS Tile -->
     <string name="quick_settings_brightness">Brightness</string>
 
+    <!-- Caffeine QS Tile -->
+    <string name="quick_settings_caffeine_label">Caffeine</string>
+    <string name="accessibility_quick_settings_caffeine_off">Caffeine off.</string>
+    <string name="accessibility_quick_settings_caffeine_on">Caffeine on.</string>
+
     <!-- Expanded Desktop QS Tile -->
     <string name="quick_settings_expanded_desktop">Expanded</string>
     <string name="quick_settings_expanded_desktop_off">Normal</string>
@@ -177,9 +182,6 @@
 
     <!-- vpn icon switch -->
     <string name="status_bar_vpn">VPN</string>
-
-    <!-- bt only connected switch -->
-    <string name="status_bar_btcon">Bluetooth only when connected</string>
 
     <!-- Screenrecord Notification Ticker -->
     <string name="screenrecord_notif_ticker">Screen is being recorded</string>

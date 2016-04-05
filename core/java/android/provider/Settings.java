@@ -3493,6 +3493,53 @@ public final class Settings {
         public static final String FORCE_EXPANDED_NOTIFICATIONS = "force_expanded_notifications";
 
         /**
+         * Whether the user has enabled headsup (Default 1)
+         * HeadsUp is enabled by default within its Settings.Global.HEADS_UP_NOTIFICATIONS_ENABLED
+         * setting. Avoid changing low level implementations and use a System setting to
+         * override per-user heads up on/off preference.
+         *
+         * Enable headsup = 1 (on by default)
+         * Disable headsup = 0
+         *
+         * @see com.android.systemui.statusbar.BaseStatusBar#addNotification
+         * @hide
+         */
+        public static final String HEADS_UP_USER_ENABLED = "heads_up_user_enabled";
+
+        /** @hide */ public static final int HEADS_UP_USER_OFF = 0;
+        /** @hide */ public static final int HEADS_UP_USER_ON = 1;
+
+        /**
+         * Which applications to disable heads up notifications in
+         * @hide
+         */
+        public static final String HEADS_UP_CUSTOM_VALUES = "heads_up_custom_values";
+
+        /**
+         * Which applications to disable heads up notifications for
+         * @hide
+         */
+        public static final String HEADS_UP_BLACKLIST_VALUES = "heads_up_blacklist_values";
+
+        /**
+         * Which applications to post all notification to heads up
+         * @hide
+         */
+        public static final String HEADS_UP_WHITELIST_VALUES = "heads_up_whitelist_values";
+
+        /**
+         * Force heads up in all applications
+         * @hide
+         */
+        public static final String HEADS_UP_FORCE_ALL = "heads_up_force_all";
+
+        /**
+         * Heads up timeout configuration
+         * @hide
+         */
+        public static final String HEADS_UP_TIMEOUT = "heads_up_timeout";
+
+        /**
          * Hide lockscreen date
          * @hide
          */
@@ -3633,12 +3680,6 @@ public final class Settings {
          * @hide
          */
         public static final String LONG_PRESS_KILL_DELAY = "long_press_kill_delay";
-
-        /**
-         * Whether to mute annoying notifications
-         * @hide
-         */
-        public static final String MUTE_ANNOYING_NOTIFICATIONS_THRESHOLD = "mute_annoying_notifications_threshold";
 
         /**
          * Whether national data roaming should be used.
@@ -3960,12 +4001,6 @@ public final class Settings {
          * @hide
          */
         public static final String RECENT_CARD_TEXT_COLOR = "recent_card_text_color";
-
-        /**
-         * show bluetooth icon only when connected
-         * @hide
-         */
-        public static final String SHOW_BLUETOOTH_ICON = "show_bluetooth_icon";
 
         /**
          * show clear all recents button
@@ -8869,13 +8904,6 @@ public final class Settings {
          * @hide
          */
         public static final String WAKE_WHEN_PLUGGED_OR_UNPLUGGED = "wake_when_plugged_or_unplugged";
-
-        /**
-         * Whether to disable audio ducking during active media playback
-         * @hide
-         */
-        public static final String ZEN_DISABLE_DUCKING_DURING_MEDIA_PLAYBACK =
-                "zen_disable_ducking_during_media_playback";
 
         /**
          * Settings to backup. This is here so that it's in the same place as the settings
